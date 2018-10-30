@@ -1,0 +1,271 @@
+@import 'vars.scss';
+
+body{
+    font-family: "StarWars";
+}
+
+// HEADER SECTION
+header{
+    background-attachment: fixed;
+    #navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        padding: 30px 0;
+        z-index: 2;
+        ul{
+            display: flex;
+            justify-content: center;
+            li{
+                margin: 0 17px;
+                @include grid-media-query(lap) {
+                    margin: 0 10px;
+                }
+                a{
+                    font-size: 1em;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-decoration: none;
+                    transition: 0.4s;
+                    &:hover{
+                        color:#fee800;
+                    }
+                    @include grid-media-query(lap) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+
+        @include grid-media-query(lap) {
+            padding: 20px 0;
+        }
+
+        @include grid-media-query(palm) {
+            background-color:#000;
+            height: 50px;
+            padding: 0;
+            ul{
+                display: none;
+                li{
+                    margin: 15px 0;
+                    text-align: center;
+                }
+            }
+            &:before{
+                content:"";
+                width: 34px;
+                height: 25px;
+                background-image: url('../images/menu.png');
+                display:block;
+                color: #fff;
+                position: fixed;
+                top:0;
+                right: 0;
+                cursor: pointer;
+                margin: 12px;
+            }
+        }
+    }
+    #navbar.on{
+        &:before{
+            background-image: url('../images/close.png');
+            width: 34px;
+            height: 34px;
+        }
+        ul{
+            display:block;
+            background-color: #000;
+            padding-bottom: 10px;
+        }
+    }
+    figure{
+        padding-top: 76px;
+        display: flex;
+        align-items: center;
+        img{
+            display: block;
+            margin: 100px auto;
+            width: 70%;
+            height: auto;
+            align-self: center;
+        }
+    }
+
+}
+
+// SECTION GENERAL
+section{
+    p{
+        display: block;
+        font-family: sans-serif;
+        line-height: 2vw;
+        font-size: 1.3vw;
+        @include grid-media-query(lap) {
+            font-size: 1.6vw;  
+        }
+        &:first-child{
+            margin-top: 0;
+        }
+        span{
+            text-decoration: underline;
+        }
+        h1{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+// SECTION 1
+#section-1{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 8% 10%;
+    @include grid-media-query(palm) {
+        display:block;
+    }
+    article{
+        text-align: left;
+        padding-right: 10%;
+        h1{
+            font-weight: bold;
+            @include grid-media-query(palm) {
+                text-align: center;
+                font-size: 5vw;
+
+            }
+        }
+        p{
+            margin: 15px 0;
+            @include grid-media-query(palm) {
+                font-size: 3vw;
+                line-height: 5vw;
+                text-align: center;
+            }
+        }
+    }
+    aside{
+        img{
+            @include grid-media-query(lap) {
+                width: 30vw;
+            }
+            @include grid-media-query(palm) {
+                width: 60%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}
+
+// SECTION 2
+#section-2{
+    figure{
+        width: 100%;
+        img{
+            object-fit: contain;
+            width: 100%;
+            margin-bottom: -3px;
+        }
+    }
+    article{
+        padding: 5% 10%;
+        h2{
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 5%;
+            @include grid-media-query(palm) {
+                font-size: 5vw;
+                font-weight: bold;
+            }
+        }
+        p{
+            @include grid-media-query(palm) {
+                font-size: 3vw;
+                line-height: 5vw;
+                text-align: center;
+            }
+        }
+        div{
+            display: flex;
+            align-items: self-start;
+            margin-bottom: 2%;
+            @include grid-media-query(palm) {
+                display:block;
+            }
+            img{
+                width: 30%;
+                margin-right: 2%;
+                @include grid-media-query(palm) {
+                    width: 80%;
+                    margin: 5% auto;
+                    display: block;
+                }
+            }
+        }
+        div ~ p{  margin-bottom: 1vw;  }
+
+    }
+}
+
+// FOOTER
+
+footer{
+    background: #181818 url('../images/darthvader.jpg') no-repeat top center;
+    background-size: contain;
+    min-height: 310px;
+    padding-top: 75px;
+    @include grid-media-query(palm) { padding-top:30px;}
+    a, span{
+        color: #888888;
+        text-align: center;
+        display:block;
+        margin-bottom: 15px;
+    }
+    #flex-container{
+        display: flex;
+        text-align: center;
+        justify-content:space-around;
+        padding: 0 60px;
+        min-height: 247px;
+        align-items: center;
+        @include grid-media-query(palm) {
+            display:block;
+            ul{
+                margin-bottom: 20px;
+                display: block;
+                margin: 0 auto;
+                height: 110px;
+            }
+        }
+        div{
+            li{ 
+                float:left;
+                margin: 0 15px;
+            }
+            a{
+                width: 32px;
+                height: 32px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            #fb a{ background-image:url('../images/icon_facebook.png');}
+            #twit a{ background-image:url('../images/icon_twitter.png');}
+            #insta a{ background-image:url('../images/icon_instagram.png');}
+
+            ul{
+                @include grid-media-query(palm) {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+    }
+}

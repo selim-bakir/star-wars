@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {}
+  },
+  "scripts": {
+    "start": "npm install gulp && npm install browser-sync && npm install gulp-sass && gulp serve"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
+}

@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "StarWars";
+  src: url("../fonts/starwars-400.woff2") format("woff2"); }
+
+body:before {
+  display: none; }
+  @media only screen and (max-width: 680px) {
+    body:before {
+      content: 'palm'; } }
+  @media only screen and (min-width: 681px) and (max-width: 1024px) {
+    body:before {
+      content: 'lap'; } }
+  @media only screen and (min-width: 1025px) {
+    body:before {
+      content: 'desk'; } }
+  @media only screen and (min-width: 1280px) {
+    body:before {
+      content: 'desk-wide'; } }
+
+body {
+  font-family: "StarWars"; }
+
+header {
+  background-attachment: fixed; }
+  header #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 30px 0;
+    z-index: 2; }
+    header #navbar ul {
+      display: flex;
+      justify-content: center; }
+      header #navbar ul li {
+        margin: 0 17px; }
+        @media only screen and (min-width: 681px) and (max-width: 1024px) {
+          header #navbar ul li {
+            margin: 0 10px; } }
+        header #navbar ul li a {
+          font-size: 1em;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
+          transition: 0.4s; }
+          header #navbar ul li a:hover {
+            color: #fee800; }
+          @media only screen and (min-width: 681px) and (max-width: 1024px) {
+            header #navbar ul li a {
+              font-size: 0.8em; } }
+    @media only screen and (min-width: 681px) and (max-width: 1024px) {
+      header #navbar {
+        padding: 20px 0; } }
+    @media only screen and (max-width: 680px) {
+      header #navbar {
+        background-color: #000;
+        height: 50px;
+        padding: 0; }
+        header #navbar ul {
+          display: none; }
+          header #navbar ul li {
+            margin: 15px 0;
+            text-align: center; }
+        header #navbar:before {
+          content: "";
+          width: 34px;
+          height: 25px;
+          background-image: url("../images/menu.png");
+          display: block;
+          color: #fff;
+          position: fixed;
+          top: 0;
+          right: 0;
+          cursor: pointer;
+          margin: 12px; } }
+  header #navbar.on:before {
+    background-image: url("../images/close.png");
+    width: 34px;
+    height: 34px; }
+  header #navbar.on ul {
+    display: block;
+    background-color: #000;
+    padding-bottom: 10px; }
+  header figure {
+    padding-top: 76px;
+    display: flex;
+    align-items: center; }
+    header figure img {
+      display: block;
+      margin: 100px auto;
+      width: 70%;
+      height: auto;
+      align-self: center; }
+
+section p {
+  display: block;
+  font-family: sans-serif;
+  line-height: 2vw;
+  font-size: 1.3vw; }
+  @media only screen and (min-width: 681px) and (max-width: 1024px) {
+    section p {
+      font-size: 1.6vw; } }
+  section p:first-child {
+    margin-top: 0; }
+  section p span {
+    text-decoration: underline; }
+  section p h1 {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px; }
+
+#section-1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 8% 10%; }
+  @media only screen and (max-width: 680px) {
+    #section-1 {
+      display: block; } }
+  #section-1 article {
+    text-align: left;
+    padding-right: 10%; }
+    #section-1 article h1 {
+      font-weight: bold; }
+      @media only screen and (max-width: 680px) {
+        #section-1 article h1 {
+          text-align: center;
+          font-size: 5vw; } }
+    #section-1 article p {
+      margin: 15px 0; }
+      @media only screen and (max-width: 680px) {
+        #section-1 article p {
+          font-size: 3vw;
+          line-height: 5vw;
+          text-align: center; } }
+  @media only screen and (min-width: 681px) and (max-width: 1024px) {
+    #section-1 aside img {
+      width: 30vw; } }
+  @media only screen and (max-width: 680px) {
+    #section-1 aside img {
+      width: 60%;
+      margin: 0 auto;
+      display: block; } }
+
+#section-2 figure {
+  width: 100%; }
+  #section-2 figure img {
+    object-fit: contain;
+    width: 100%;
+    margin-bottom: -3px; }
+
+#section-2 article {
+  padding: 5% 10%; }
+  #section-2 article h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 5%; }
+    @media only screen and (max-width: 680px) {
+      #section-2 article h2 {
+        font-size: 5vw;
+        font-weight: bold; } }
+  @media only screen and (max-width: 680px) {
+    #section-2 article p {
+      font-size: 3vw;
+      line-height: 5vw;
+      text-align: center; } }
+  #section-2 article div {
+    display: flex;
+    align-items: self-start;
+    margin-bottom: 2%; }
+    @media only screen and (max-width: 680px) {
+      #section-2 article div {
+        display: block; } }
+    #section-2 article div img {
+      width: 30%;
+      margin-right: 2%; }
+      @media only screen and (max-width: 680px) {
+        #section-2 article div img {
+          width: 80%;
+          margin: 5% auto;
+          display: block; } }
+  #section-2 article div ~ p {
+    margin-bottom: 1vw; }
+
+footer {
+  background: #181818 url("../images/darthvader.jpg") no-repeat top center;
+  background-size: contain;
+  min-height: 310px;
+  padding-top: 75px; }
+  @media only screen and (max-width: 680px) {
+    footer {
+      padding-top: 30px; } }
+  footer a, footer span {
+    color: #888888;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px; }
+  footer #flex-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0 60px;
+    min-height: 247px;
+    align-items: center; }
+    @media only screen and (max-width: 680px) {
+      footer #flex-container {
+        display: block; }
+        footer #flex-container ul {
+          margin-bottom: 20px;
+          display: block;
+          margin: 0 auto;
+          height: 110px; } }
+    footer #flex-container div li {
+      float: left;
+      margin: 0 15px; }
+    footer #flex-container div a {
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    footer #flex-container div #fb a {
+      background-image: url("../images/icon_facebook.png"); }
+    footer #flex-container div #twit a {
+      background-image: url("../images/icon_twitter.png"); }
+    footer #flex-container div #insta a {
+      background-image: url("../images/icon_instagram.png"); }
+    @media only screen and (max-width: 680px) {
+      footer #flex-container div ul {
+        display: flex;
+        justify-content: center; } }

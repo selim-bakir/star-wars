@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "StarWars";
+  src: url("../fonts/starwars-400.woff2") format("woff2"); }
+
+body:before {
+  display: none; }
+  @media only screen and (max-width: 680px) {
+    body:before {
+      content: 'palm'; } }
+  @media only screen and (min-width: 681px) and (max-width: 1024px) {
+    body:before {
+      content: 'lap'; } }
+  @media only screen and (min-width: 1025px) {
+    body:before {
+      content: 'desk'; } }
+  @media only screen and (min-width: 1280px) {
+    body:before {
+      content: 'desk-wide'; } }
