@@ -255,9 +255,26 @@ footer{
                 background-repeat: no-repeat;
                 background-position: center center;
             }
-            #fb a{ background-image:url('../images/icon_facebook.png');}
-            #twit a{ background-image:url('../images/icon_twitter.png');}
-            #insta a{ background-image:url('../images/icon_instagram.png');}
+            #fb a{ 
+                background-image:url('../images/icon_facebook.png');
+                @include grid-media-query(palm) {
+                    background-image:url('../images/icon_facebook.svg');
+                }
+
+            }
+            #twit a{ 
+                background-image:url('../images/icon_twitter.png');
+                @include grid-media-query(palm) {
+                    background-image:url('../images/icon_twitter.svg');
+                }
+            }
+            #insta a{ 
+                background-image:url('../images/icon_instagram.png');
+                // LE SVG EST DE COULEUR NOIR !!!!
+                // @include grid-media-query(palm) {
+                //     background-image:url('../images/icon_instagram.svg');
+                // }
+            }
 
             ul{
                 @include grid-media-query(palm) {

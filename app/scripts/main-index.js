@@ -24,12 +24,18 @@ jQuery(document).ready(function($){
     
     
     $(window).scroll(function(){
-        changeBgNav()
-
         if($(window).scrollTop() >= headerHeight){
-                $('#ad-battle-front').css('position','sticky').css('top','115px');
+            $('#ad-battle-front').css('position','sticky').css('top','115px');
         } else {
             $('#ad-battle-front').css('position','static');
         }    
+        changeBgNav()
     });
+
+    // RETINA SRC IMAGE SWITCH
+        var device = $(window).innerWidth() > 680 ? "desktop" : "mobile";
+        $("img").each(function() {
+            $(this).attr("src", $(this).data(device));
+        });
+
 });

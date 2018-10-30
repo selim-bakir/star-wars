@@ -287,8 +287,14 @@ footer {
       background-position: center center; }
     footer #flex-container div #fb a {
       background-image: url("../images/icon_facebook.png"); }
+      @media only screen and (max-width: 680px) {
+        footer #flex-container div #fb a {
+          background-image: url("../images/icon_facebook.svg"); } }
     footer #flex-container div #twit a {
       background-image: url("../images/icon_twitter.png"); }
+      @media only screen and (max-width: 680px) {
+        footer #flex-container div #twit a {
+          background-image: url("../images/icon_twitter.svg"); } }
     footer #flex-container div #insta a {
       background-image: url("../images/icon_instagram.png"); }
     @media only screen and (max-width: 680px) {
