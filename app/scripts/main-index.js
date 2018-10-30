@@ -19,9 +19,8 @@ jQuery(document).ready(function($){
     });
 
     // AD STICKY
-        var adStarWars = $('#ad-battle-front').offset();
-        var headerHeight = $('header').outerHeight();
-    
+    var adStarWars = $('#ad-battle-front').offset();
+    var headerHeight = $('header').outerHeight();
     
     $(window).scroll(function(){
         if($(window).scrollTop() >= headerHeight){

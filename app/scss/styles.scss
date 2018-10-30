@@ -221,13 +221,20 @@ footer{
     background-size: contain;
     min-height: 310px;
     padding-top: 75px;
-    @include grid-media-query(palm) { padding-top:30px;}
+    @include grid-media-query(palm) { 
+        padding-top:30px;
+        background: #181818 url('../images/darthvader-2x.jpg') no-repeat top center;
+    }
     a, span{
         color: #888888;
         text-align: center;
         display:block;
         margin-bottom: 15px;
     }
+    a:hover{
+        color: #fee800; 
+    }
+
     #flex-container{
         display: flex;
         text-align: center;
@@ -254,6 +261,7 @@ footer{
                 height: 32px;
                 background-repeat: no-repeat;
                 background-position: center center;
+                font-size: 0;
             }
             #fb a{ 
                 background-image:url('../images/icon_facebook.png');

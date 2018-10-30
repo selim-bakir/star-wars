@@ -190,12 +190,15 @@ footer {
   padding-top: 75px; }
   @media only screen and (max-width: 680px) {
     footer {
-      padding-top: 30px; } }
+      padding-top: 30px;
+      background: #181818 url("../images/darthvader-2x.jpg") no-repeat top center; } }
   footer a, footer span {
     color: #888888;
     text-align: center;
     display: block;
     margin-bottom: 15px; }
+  footer a:hover {
+    color: #fee800; }
   footer #flex-container {
     display: flex;
     text-align: center;
@@ -218,7 +221,8 @@ footer {
       width: 32px;
       height: 32px;
       background-repeat: no-repeat;
-      background-position: center center; }
+      background-position: center center;
+      font-size: 0; }
     footer #flex-container div #fb a {
       background-image: url("../images/icon_facebook.png"); }
       @media only screen and (max-width: 680px) {
