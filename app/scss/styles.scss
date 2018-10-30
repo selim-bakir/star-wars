@@ -1,7 +1,8 @@
 @import 'vars.scss';
 
 body{
-    font-family: "StarWars";
+    font-family: "StarWars", Arial, Helvetica, sans-serif;
+
 }
 
 // HEADER SECTION
@@ -200,7 +201,6 @@ section{
                 display:block;
             }
             img{
-                width: 30%;
                 margin-right: 2%;
                 @include grid-media-query(palm) {
                     width: 80%;

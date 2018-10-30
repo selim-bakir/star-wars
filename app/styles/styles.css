@@ -18,7 +18,7 @@ body:before {
       content: 'desk-wide'; } }
 
 body {
-  font-family: "StarWars"; }
+  font-family: "StarWars", Arial, Helvetica, sans-serif; }
 
 header {
   background-attachment: fixed; }
@@ -173,7 +173,6 @@ section p {
       #section-2 article div {
         display: block; } }
     #section-2 article div img {
-      width: 30%;
       margin-right: 2%; }
       @media only screen and (max-width: 680px) {
         #section-2 article div img {
