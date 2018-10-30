@@ -1,6 +1,6 @@
 @font-face {
   font-family: "StarWars";
-  src: url("../fonts/starwars-400.woff2") format("woff2"); }
+  src: url("../fonts/starwars-400.woff2") format("woff2"), url("../fonts/starwars-400.woff") format("woff"), url("../fonts/starwars-400.ttf") format("ttf"); }
 
 body:before {
   display: none; }
