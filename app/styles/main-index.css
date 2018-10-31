@@ -116,6 +116,8 @@ header {
           @media only screen and (min-width: 681px) and (max-width: 1024px) {
             header #navbar ul li a {
               font-size: 0.8em; } }
+    header #navbar .blind-burger {
+      display: none; }
     @media only screen and (min-width: 681px) and (max-width: 1024px) {
       header #navbar {
         padding: 20px 0; } }
@@ -140,7 +142,8 @@ header {
           top: 0;
           right: 0;
           cursor: pointer;
-          margin: 12px; } }
+          margin: 12px;
+          display: block; } }
   header #navbar.on .blind-burger {
     background-image: url("../images/close.png");
     width: 34px;

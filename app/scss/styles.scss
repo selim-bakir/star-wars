@@ -40,7 +40,7 @@ header{
                 }
             }
         }
-
+        .blind-burger{display:none;}
         @include grid-media-query(lap) {
             padding: 20px 0;
         }
@@ -68,6 +68,7 @@ header{
                 right: 0;
                 cursor: pointer;
                 margin: 12px;
+                display: block;
             }
         }
     }
