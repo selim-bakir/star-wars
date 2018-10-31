@@ -94,7 +94,8 @@ header {
     width: 100%;
     background-color: transparent;
     padding: 30px 0;
-    z-index: 2; }
+    z-index: 2;
+    opacity: 0.8; }
     header #navbar ul {
       display: flex;
       justify-content: center; }
