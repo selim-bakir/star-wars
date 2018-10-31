@@ -304,5 +304,12 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @include grid-media-query(palm) {
+        -moz-background-size: auto;
+        -webkit-background-size: auto;
+        background-attachment: scroll;
+        background-position: top;
+        background-size: auto;
+    }
     
 }
