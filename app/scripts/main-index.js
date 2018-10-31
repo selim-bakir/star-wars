@@ -2,6 +2,7 @@ jQuery(document).ready(function($){
 
     // CHANGE BACKGROUND OF THE STICKY NAV 
         var nav = $('#navbar');
+        var navBurger = $('.blind-burger');
         var navbarPos = navbar.offsetTop;
 
         function changeBgNav() {
@@ -14,8 +15,8 @@ jQuery(document).ready(function($){
 
     // BURGER MENU 
 
-    nav.click(function(){
-        $(this).toggleClass('on');
+    navBurger.click(function(){
+        nav.toggleClass('on');
     });
 
     // AD STICKY
@@ -37,4 +38,9 @@ jQuery(document).ready(function($){
             $(this).attr("src", $(this).data(device));
         });
 
+
+    // PARALLAX
+        $(".parallax").each(function() {
+            $(this).css("background-image", "url("+$(this).data('image')+")");
+        });
 });

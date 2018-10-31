@@ -63,7 +63,7 @@ header {
           header #navbar ul li {
             margin: 15px 0;
             text-align: center; }
-        header #navbar:before {
+        header #navbar .blind-burger {
           content: "";
           width: 34px;
           height: 25px;
@@ -75,7 +75,7 @@ header {
           right: 0;
           cursor: pointer;
           margin: 12px; } }
-  header #navbar.on:before {
+  header #navbar.on .blind-burger {
     background-image: url("../images/close.png");
     width: 34px;
     height: 34px; }
@@ -122,6 +122,9 @@ section p {
   #section-1 article {
     text-align: left;
     padding-right: 10%; }
+    @media only screen and (max-width: 680px) {
+      #section-1 article {
+        padding: 0; } }
     #section-1 article h1 {
       font-weight: bold; }
       @media only screen and (max-width: 680px) {
@@ -239,3 +242,9 @@ footer {
       footer #flex-container div ul {
         display: flex;
         justify-content: center; } }
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
